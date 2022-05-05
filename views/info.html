@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ @title }}</title>
+</head>
+<body>
+    <h1>{{ @title }}</h1>
+    <p>{{ @username }} is logged in</p>
+    <p>I like {{ @color }}</p>
+    <p>Circumference is {{round(2 *pi() * @radius, 3)}}</p>
+
+    <h2>My favorite fruits</h2>
+    <ul>
+        <repeat group="{{ @fruits }}" value="{{ @fruit }}">
+            <li>{{ trim(@fruit)}}</li>
+        </repeat>
+    </ul>
+
+
+
+</body>
+</html>

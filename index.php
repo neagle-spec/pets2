@@ -14,7 +14,13 @@ $f3 = Base::instance();
 $f3->route('GET /', function ($f3) {
     echo '<h1>My Pets</h1>';
     $view = new Template();
-    echo $view->render('views/info.html');
+    echo $view->render('views/pet-home.html');
+});
+
+$f3->route('GET /', function ($f3) {
+    echo '<h1>Order1</h1>';
+    $view = new Template();
+    echo $view->render('views/pet-order1.html');
 });
 
 
