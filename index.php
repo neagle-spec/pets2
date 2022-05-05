@@ -29,16 +29,18 @@ $f3->route('GET /order1', function ($f3) {
     echo $view->render('views/pet-order1.html');
 });
 
-$f3->route('GET /order2', function ($f3) {
+$f3->route('GET|POST /order2', function ($f3) {
     echo '<h1>Order2</h1>';
     $_SESSION['petType'] = $_POST['petType'];
     $_SESSION['color'] = $_POST['color'];
+
+
 
     $view = new Template();
     echo $view->render('views/pet-order2.html');
 });
 
-$f3->route('GET /order2', function ($f3) {
+$f3->route('GET|POST /order2', function ($f3) {
     echo '<h1>Pet Summary</h1>';
     $view = new Template();
     echo $view->render('views/pet-summary.html');
