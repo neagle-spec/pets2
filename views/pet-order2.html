@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-
+<repeat group="{{ @petType }}" value="{{ @color }}">
+    <p>{{ trim(@petType) }}</p>
+</repeat>
 </body>
 </html>
