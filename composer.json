@@ -1,0 +1,12 @@
+{
+  "name": "aneagle/328/pets2",
+  "authors": [
+    {
+      "name": "Aaron Neagle",
+      "email": "neagle.aaron@student.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
