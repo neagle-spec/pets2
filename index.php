@@ -11,37 +11,37 @@ require_once('vendor/autoload.php');
 $f3 = Base::instance();
 
 // define a default root
-$f3->route('GET /', function ($f3) {
+$f3->route('GET /', function () {
     echo '<h1>My Pets</h1>';
     $view = new Template();
     echo $view->render('views/pet-home.html');
 });
 
-$f3->route('GET /order', function ($f3) {
+$f3->route('GET /order', function () {
     echo '<h1>Order a Pet</h1>';
     $view = new Template();
     echo $view->render('views/pet-order.html');
 });
 
-$f3->route('GET /order1', function ($f3) {
+$f3->route('GET /order1', function () {
     echo '<h1>Order Page</h1>';
     $view = new Template();
     echo $view->render('views/pet-order1.html');
 });
 
 $f3->route('GET|POST /order2', function ($f3) {
-    echo '<h1>Order2</h1>';
+    echo '<h1>Order 2</h1>';
     $_SESSION['petType'] = $_POST['petType'];
     $_SESSION['color'] = $_POST['color'];
-
-
 
     $view = new Template();
     echo $view->render('views/pet-order2.html');
 });
 
-$f3->route('GET|POST /order2', function ($f3) {
-    echo '<h1>Pet Summary</h1>';
+$f3->route('GET|POST /summary', function ($f3) {
+    echo '<h1>Pet summary</h1>';
+    $_SESSION['petType'] = $_POST['petType'];
+    $_SESSION['color'] = $_POST['color'];
     $view = new Template();
     echo $view->render('views/pet-summary.html');
 });
