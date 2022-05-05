@@ -17,10 +17,16 @@ $f3->route('GET /', function ($f3) {
     echo $view->render('views/pet-home.html');
 });
 
-$f3->route('GET /', function ($f3) {
+$f3->route('GET /order', function ($f3) {
     echo '<h1>Order1</h1>';
     $view = new Template();
     echo $view->render('views/pet-order1.html');
+});
+
+$f3->route('GET /order2', function ($f3) {
+    echo '<h1>Order2</h1>';
+    $view = new Template();
+    echo $view->render('views/pet-order2.html');
 });
 
 
