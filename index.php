@@ -29,6 +29,12 @@ $f3->route('GET /order2', function ($f3) {
     echo $view->render('views/pet-order2.html');
 });
 
+$f3->route('GET /order2', function ($f3) {
+    echo '<h1>Pet Summary</h1>';
+    $view = new Template();
+    echo $view->render('views/pet-summary.html');
+});
+
 
 
 // run fat free
