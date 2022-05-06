@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>{{@SESSION.color}} {{@SESSION.petType}} </p>
+<include href="views/header.html"></include>
+
+<body class="text-center">
+<h1>Pet Order Summary</h1>
+<br>
+<h1>Thank you for your order!</h1>
+<p>You choose a : {{@SESSION.color}} , {{@SESSION.petType}} named {{@SESSION.name}}</p>
+
 </body>
 </html>

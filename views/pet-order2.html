@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>test</h1>
-<a href="summary" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Next ></a>
-<repeat group="{{ @petType }}" value="{{ @color }}">
-    <p>{{ trim(@petType) }}</p>
-</repeat>
+<include href="views/header.html"></include>
+
+<body class="text-center">
+<form action="summary" method="post">
+    <h1>Naming Page!</h1>
+    <br>
+    <br>
+    <label for="name">What would you like to call your new pet?</label><br>
+    <input type="text" id="name" name="name" placeholder="Pet Name here"><br>
+    <br>
+    <button class="btn btn-primary" type="submit">Place Order</button>
+
+</form>
 </body>
 </html>

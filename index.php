@@ -24,24 +24,31 @@ $f3->route('GET /order', function () {
 });
 
 $f3->route('GET /order1', function () {
-    echo '<h1>Order Page</h1>';
+
     $view = new Template();
     echo $view->render('views/pet-order1.html');
 });
 
-$f3->route('GET|POST /order2', function ($f3) {
-    echo '<h1>Order 2</h1>';
+$f3->route('POST /order2', function () {
+    var_dump ($_POST);
     $_SESSION['petType'] = $_POST['petType'];
     $_SESSION['color'] = $_POST['color'];
-
+    $_SESSION['name'] = $_POST['name'];
     $view = new Template();
     echo $view->render('views/pet-order2.html');
 });
 
-$f3->route('GET|POST /summary', function ($f3) {
-    echo '<h1>Pet summary</h1>';
+$f3->route('GET|POST /summary', function () {
+    var_dump ($_POST);
     $_SESSION['petType'] = $_POST['petType'];
     $_SESSION['color'] = $_POST['color'];
+    if (empty($_POST['name'])) {
+        $name = "No Hobby selected";
+    }
+    else {
+    }
+    $_SESSION['name'] = $name;
+
     $view = new Template();
     echo $view->render('views/pet-summary.html');
 });

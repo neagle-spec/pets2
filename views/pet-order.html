@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
+<include href="views/header.html"></include>
+
+<body class="text-center">
 <form action="order2" method="post">
+    <br>
+    <br>
     <label for="petType">What kind of pet would you like to order?</label><br>
-    <input type="text" id="petType" name="petType" ><br>
+    <input type="text" id="petType" name="petType" placeholder="Pet Type here"><br>
 
     <label for="color">Select a color</label>
     <select id="color" name="color">
-        <option value="volvo">Red</option>
-        <option value="saab">Brown</option>
-        <option value="fiat">Grey</option>
-        <option value="audi">White</option>
+        <option value="Brown">Brown</option>
+        <option value="Tan">Tan</option>
+        <option value="Grey">Grey</option>
+        <option value="White">White</option>
     </select>
     <br>
-    <a href="order2" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Order</a>
+    <button class="btn btn-primary" type="submit">Order</button>
 
 </form>
 
